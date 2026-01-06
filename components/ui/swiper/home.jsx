@@ -21,9 +21,6 @@ export default function SwiperHome() {
                 pagination={{ clickable: true }}
             >
                 <SwiperSlide>
-                    <img className="w-full h-full" src="https://aptech-studentconnect.com/arena/images/main-banner.jpg" alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
                     <img className="w-full h-full" src="https://arenauttarpara.com/images/banner8.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
