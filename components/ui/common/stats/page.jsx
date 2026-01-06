@@ -1,0 +1,74 @@
+
+'use client'
+
+import CountUp from '@/components/CountUp'
+import GradientText from '@/components/GradientText'
+
+// For a smoother animation, the gradient should start and end with the same color
+
+
+
+export default function Stats() {
+    return (
+        <div className="py-12">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <dl className="grid grid-cols-2 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <GradientText
+                            colors={["#e31510", "#f2e416"]}
+                            className="custom-class"
+                        >
+                            <CountUp
+                                startCounting
+                                className="count-up-text order-first text-3xl font-semibold tracking-tight sm:text-5xl"
+                                to="30"
+                            />
+                        </GradientText>
+                        <dt className="text-base/7 text-black">Years of Experience</dt>
+                    </div>
+                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <GradientText
+                            colors={["#e31510", "#f2e416"]}
+                            className="custom-class"
+                        >
+                            <CountUp
+                                startCounting
+                                className="count-up-text order-first text-3xl font-semibold tracking-tight sm:text-5xl"
+                                to="500000"
+                                separator=','
+                            />
+                        </GradientText>
+                        <dt className="text-base/7 text-black">Students Trained</dt>
+                    </div>
+                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <GradientText
+                            colors={["#e31510", "#f2e416"]}
+                            className="custom-class"
+                        >
+                            <CountUp
+                                startCounting
+                                className="count-up-text order-first text-3xl font-semibold tracking-tight sm:text-5xl"
+                                to="200"
+                            />
+                        </GradientText>
+                        <dt className="text-base/7 text-black">Centres</dt>
+                    </div>
+                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <GradientText
+                            colors={["#e31510", "#f2e416"]}
+                            className="custom-class"
+                        >
+                            <CountUp
+                                startCounting
+                                className="count-up-text order-first text-3xl font-semibold tracking-tight sm:text-5xl"
+                                to="20"
+                            />
+                        </GradientText>
+                        <dt className="text-base/7 text-black">Countries</dt>
+                    </div>
+                </dl>
+            </div>
+        </div>
+
+    )
+}

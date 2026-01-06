@@ -1,21 +1,26 @@
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import SplashCursor from '@/components/SplashCursor'
+
 
 const HeroSection = () => {
   return (
-    <section className='flex min-h-[calc(100dvh-4rem)] flex-1 flex-col justify-between gap-12 overflow-x-hidden pt-8 sm:gap-16 sm:pt-16 lg:gap-24 lg:pt-24'>
+    <section className='flex min-h-[calc(100dvh-4rem)] flex-1 flex-col justify-between gap-12 overflow-x-hidden pt-8 sm:gap-16 sm:pt-12 lg:gap-24 lg:pt-24'>
       {/* Hero Content */}
+      <SplashCursor />
+
       <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:px-8'>
-        <div className='bg-muted flex items-center gap-2.5 rounded-full border px-3 py-2'>
-          <Badge>AI-Powered</Badge>
-          <span className='text-muted-foreground'>Solution for client-facing businesses</span>
+        <div className='bg-muted flex items-center gap-2.5 rounded-full border px-3 py-2 text-white'>
+          <Badge>GenAI-Powered</Badge>
+          <span className='font-semibold text-black'>Courses</span>
         </div>
 
         <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl'>
-          Sizzling Summer Delights
+          Unleash Your
           <br />
-          <span className='relative'>
-            Effortless
+          <span className='relative text-9xl'>
+            Creative
             <svg
               width='223'
               height='12'
@@ -45,24 +50,22 @@ const HeroSection = () => {
               </defs>
             </svg>
           </span>{' '}
-          Recipes for Parties!
+          Power!
         </h1>
 
-        <p className='text-muted-foreground'>
-          Dive into a world of flavor this summer with our collection of Sizzling Summer Delights!
-          <br />
-          From refreshing appetizers to delightful desserts
+        <p className='text-muted-foreground mt-8 '>
+          Arena Animation empowers you with industry-focused training in animation, VFX, gaming, and digital design. With expert mentors, practical learning, and real-world projects, we help turn creative passion into a successful career.
         </p>
 
-        <Button size='lg' asChild>
-          <a href='#'>Try It Now</a>
+        <Button size='lg' asChild className='text-white'>
+          <Link href='#'>Book Demo</Link>
         </Button>
       </div>
 
       {/* Image */}
       <img
-        src='https://cdn.shadcnstudio.com/ss-assets/blocks/marketing/hero/image-19.png'
-        alt='Dishes'
+        src='https://content3.jdmagicbox.com/v2/comp/patna/p7/0612px612.x612.250523030506.f3p7/catalogue/arena-animation-ali-nagar-colony-patna-animation-services-f08xkhpzj6.jpg'
+        alt='Arena Animation Banner'
         className='min-h-67 w-full object-cover'
       />
     </section>

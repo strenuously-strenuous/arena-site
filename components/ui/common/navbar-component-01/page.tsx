@@ -2,20 +2,20 @@ import Navbar from '@/components/shadcn-studio/blocks/navbar-component-01/navbar
 
 const navigationData = [
   {
-    title: 'Home',
-    href: '#'
+    title: 'Courses',
+    href: 'courses'
   },
   {
-    title: 'Products',
-    href: '#'
+    title: 'Placements',
+    href: 'placements'
   },
   {
-    title: 'About Us',
-    href: '#'
+    title: 'About',
+    href: 'about'
   },
   {
-    title: 'Contacts',
-    href: '#'
+    title: 'Contact',
+    href: 'Contact'
   }
 ]
 
