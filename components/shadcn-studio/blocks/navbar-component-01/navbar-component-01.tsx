@@ -26,22 +26,13 @@ const Navbar = ({ navigationData }: { navigationData: NavigationItem }) => {
           <Link href='/'>
             <Image src="/images/logo-black.png" width={100} height={100} alt='logo' />
           </Link>
-          <div className='flex gap-6'>
-            <Link href='courses' className='hover:text-primary max-md:hidden'>
-              Courses
-            </Link>
-            <Link href='placements' className='hover:text-primary max-md:hidden'>
-              Placements
-            </Link>
-            <Link href='about' className='hover:text-primary max-md:hidden'>
-              About
-            </Link>
-            <Link href='contact' className='hover:text-primary max-md:hidden'>
-              Contact
-            </Link>
+          <div className='md:flex hidden gap-6'>
+            {navigationData.map((item, index) => (
+              <Link href={item.href}>{item.title}</Link>
+            ))}
           </div>
           <div className='text-end'>
-            <a href="tel:9625277697" className='transition flex gap-3 border-primary px-4 py-1 hover:text-primary'>
+            <a href="tel:9625277697" className='transition md:flex hidden gap-3 border-primary px-4 py-1 hover:text-primary'>
 
               <div className='flex flex-col gap-0'>
                 <span className='text-primary p-1 justify-end rounded-[2px] justify-center text-[12px] uppercase flex items-center gap-2'>

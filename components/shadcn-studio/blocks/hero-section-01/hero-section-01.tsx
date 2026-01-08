@@ -1,73 +1,98 @@
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import SplashCursor from '@/components/SplashCursor'
+
+import RippleGrid from '@/components/RippleGrid';
+
+<div style={{ position: 'relative', height: '500px', overflow: 'hidden' }}>
+  <RippleGrid
+    enableRainbow={false}
+    gridColor="#ffffff"
+    rippleIntensity={0.05}
+    gridSize={10}
+    gridThickness={15}
+    mouseInteraction={true}
+    mouseInteractionRadius={1.2}
+    opacity={0.8}
+  />
+</div>
+
+
 
 
 const HeroSection = () => {
   return (
-    <section className='flex min-h-[calc(100dvh-4rem)] flex-1 flex-col justify-between gap-12 overflow-x-hidden pt-8 sm:gap-16 sm:pt-12 lg:gap-24 lg:pt-24'>
+    <section className='flex flex-1 flex-col justify-between overflow-x-hidden'>
       {/* Hero Content */}
-      <SplashCursor />
 
-      <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:px-8'>
-        <div className='bg-muted flex items-center gap-2.5 rounded-full border px-3 py-2 text-white'>
-          <Badge>GenAI-Powered</Badge>
-          <span className='font-semibold text-black'>Courses</span>
+      <div className='relative'>
+        <div style={{ width: '100%', height: 600, position: 'relative' }}>
+          <RippleGrid
+            enableRainbow={false}
+            gridColor="#F2E30C"
+            rippleIntensity={0.05}
+            gridSize={10}
+            gridThickness={15}
+            mouseInteraction={true}
+            mouseInteractionRadius={1.2}
+            opacity={0.1}
+          />
         </div>
 
-        <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl'>
-          Unleash Your
-          <br />
-          <span className='relative text-9xl'>
-            Creative
-            <svg
-              width='223'
-              height='12'
-              viewBox='0 0 223 12'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-              className='absolute inset-x-0 bottom-0 w-full translate-y-1/2 max-sm:hidden'
-            >
-              <path
-                d='M1.11716 10.428C39.7835 4.97282 75.9074 2.70494 114.894 1.98894C143.706 1.45983 175.684 0.313587 204.212 3.31596C209.925 3.60546 215.144 4.59884 221.535 5.74551'
-                stroke='url(#paint0_linear_10365_68643)'
-                strokeWidth='2'
-                strokeLinecap='round'
-              />
-              <defs>
-                <linearGradient
-                  id='paint0_linear_10365_68643'
-                  x1='18.8541'
-                  y1='3.72033'
-                  x2='42.6487'
-                  y2='66.6308'
-                  gradientUnits='userSpaceOnUse'
-                >
-                  <stop stopColor='var(--primary)' />
-                  <stop offset='1' stopColor='var(--primary-foreground)' />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>{' '}
-          Power!
-        </h1>
+        <div className='absolute start-0 end-0 top-0 bottom-0 mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center py-6 sm:px-6 lg:px-8'>
+          <div className=' flex items-center gap-2.5 rounded-full border px-3 py-2 text-white'>
+            <Badge>GenAI-Powered</Badge>
+            <span className='font-semibold text-black'>Courses</span>
+          </div>
 
-        <p className='text-muted-foreground mt-8 '>
-          Arena Animation empowers you with industry-focused training in animation, VFX, gaming, and digital design. With expert mentors, practical learning, and real-world projects, we help turn creative passion into a successful career.
-        </p>
+          <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl'>
+            Unleash Your
+            <br />
+            <span className='relative text-9xl'>
+              Creative
+              <svg
+                width='223'
+                height='12'
+                viewBox='0 0 223 12'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+                className='absolute inset-x-0 bottom-0 w-full translate-y-1/2 max-sm:hidden'
+              >
+                <path
+                  d='M1.11716 10.428C39.7835 4.97282 75.9074 2.70494 114.894 1.98894C143.706 1.45983 175.684 0.313587 204.212 3.31596C209.925 3.60546 215.144 4.59884 221.535 5.74551'
+                  stroke='url(#paint0_linear_10365_68643)'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                />
+                <defs>
+                  <linearGradient
+                    id='paint0_linear_10365_68643'
+                    x1='18.8541'
+                    y1='3.72033'
+                    x2='42.6487'
+                    y2='66.6308'
+                    gradientUnits='userSpaceOnUse'
+                  >
+                    <stop stopColor='var(--primary)' />
+                    <stop offset='1' stopColor='var(--primary-foreground)' />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>{'  '}
+            Power!
+          </h1>
 
-        <Button size='lg' asChild className='text-white'>
-          <Link href='#'>Book Demo</Link>
-        </Button>
+          <p className='text-muted-foreground mt-8 '>
+            Arena Animation empowers you with industry-focused training in <strong>Animation</strong>, <strong>VFX</strong>, <strong>Gaming</strong>, <strong>Digital Design</strong>, <strong>UI/UX</strong>, and <strong>Web Design & Development</strong>. With expert mentors, practical learning, and real-world projects, we help turn creative passion into a successful career.
+
+
+          </p>
+
+          <Button size='lg' asChild className='text-white'>
+            <Link href='#'>Enquire Now</Link>
+          </Button>
+        </div>
       </div>
-
-      {/* Image */}
-      <img
-        src='https://content3.jdmagicbox.com/v2/comp/patna/p7/0612px612.x612.250523030506.f3p7/catalogue/arena-animation-ali-nagar-colony-patna-animation-services-f08xkhpzj6.jpg'
-        alt='Arena Animation Banner'
-        className='min-h-67 w-full object-cover'
-      />
     </section>
   )
 }

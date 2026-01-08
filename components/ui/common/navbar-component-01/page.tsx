@@ -16,6 +16,10 @@ const navigationData = [
   {
     title: 'Contact',
     href: 'Contact'
+  },
+  {
+    title: 'Student Works',
+    href: 'student-works'
   }
 ]
 
