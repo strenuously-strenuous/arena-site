@@ -10,7 +10,13 @@ import { Card, CardHeader, CardDescription, CardTitle, CardFooter, CardContent }
 
 import { cn } from '@/lib/utils'
 
-const CardProductDemo = ({title, subtitle, image}) => {
+type Props = {
+  title: string
+  subtitle: string
+  image: string
+}
+
+const CardProductDemo = ({ title, subtitle, image }: Props) => {
   const [liked, setLiked] = useState<boolean>(false)
 
   return (
