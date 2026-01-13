@@ -3,23 +3,23 @@ import Navbar from '@/components/shadcn-studio/blocks/navbar-component-01/navbar
 const navigationData = [
   {
     title: 'Courses',
-    href: 'courses'
+    href: '/courses'
   },
   {
     title: 'Placements',
-    href: 'placements'
+    href: '/placements'
   },
   {
     title: 'About',
-    href: 'about'
+    href: '/about'
   },
   {
     title: 'Contact',
-    href: 'Contact'
+    href: '/contact'
   },
   {
     title: 'Student Works',
-    href: 'student-works'
+    href: '/student-works'
   }
 ]
 

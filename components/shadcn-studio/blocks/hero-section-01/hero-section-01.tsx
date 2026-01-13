@@ -6,14 +6,14 @@ import RippleGrid from '@/components/RippleGrid';
 
 <div style={{ position: 'relative', height: '500px', overflow: 'hidden' }}>
   <RippleGrid
-    enableRainbow={false}
+    enableRainbow={true}
     gridColor="#ffffff"
     rippleIntensity={0.05}
     gridSize={10}
-    gridThickness={15}
+    gridThickness={10}
     mouseInteraction={true}
     mouseInteractionRadius={1.2}
-    opacity={0.8}
+    opacity={0.9}
   />
 </div>
 
