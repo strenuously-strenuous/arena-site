@@ -20,22 +20,16 @@ export default function Home() {
     <div className="">
       <NavbarPage />
 
-      <div className="">
-        <Image src={"/images/banner.png"} fill alt="Banner" />
+      <div className="relative mt-15" style={{ minHeight: 600 }}>
+        <Image className="" src={"/images/banner.png"} fill alt="Banner" />
       </div>
 
 
-      {/* <HeroSection /> */}
-      {/* <SwiperHome /> */}
-      {/* <Stats /> */}
-      {/* <FeaturedCourses /> */}
+      <HeroSection />
+      <SwiperHome />
+      <Stats />
+      <FeaturedCourses />
 
-      <img className="w-full container rounded-4xl mx-auto" src="https://uwm.edu/cie/wp-content/uploads/sites/600/2022/06/Intl-admissions-banner.jpg" />
-      <img
-        src='https://content3.jdmagicbox.com/v2/comp/patna/p7/0612px612.x612.250523030506.f3p7/catalogue/arena-animation-ali-nagar-colony-patna-animation-services-f08xkhpzj6.jpg'
-        alt='Arena Animation Banner'
-        className='w-full object-cover container mx-auto rounded-4xl'
-      />
       <WhyUs />
       <Jumbotron />
       <AccordionDemo />
