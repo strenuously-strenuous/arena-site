@@ -17,3 +17,33 @@ awards
 quick CTA section
 footer
 `
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        title: "",
+        slug: "",
+        featured: true,
+        description: "",
+        heroImage: "https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg",
+        duration: "290",
+        softwareAndToolsCovered: [],
+        jobProfiles: [],
+        syllabus: [
+            {
+                title: "",
+                items: [
+
+                ]
+            },
+        ]
+    }

@@ -19,10 +19,16 @@ export default function Home() {
   return (
     <div className="">
       <NavbarPage />
-      <HeroSection />
-      <SwiperHome />
-      <Stats />
-      <FeaturedCourses />
+
+      <div className="">
+        <Image src={"/images/banner.png"} fill alt="Banner" />
+      </div>
+
+
+      {/* <HeroSection /> */}
+      {/* <SwiperHome /> */}
+      {/* <Stats /> */}
+      {/* <FeaturedCourses /> */}
 
       <img className="w-full container rounded-4xl mx-auto" src="https://uwm.edu/cie/wp-content/uploads/sites/600/2022/06/Intl-admissions-banner.jpg" />
       <img
