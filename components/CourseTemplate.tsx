@@ -18,18 +18,11 @@ export default function CourseTemplate({ course }: { course: Course }) {
                 {/* Hero */}
                 <section className="grid lg:grid-cols-2 gap-10 items-center">
                     <div>
-                        <div className="text-sm text-gray-500">
-                            {course.category} • {course.level} • {course.mode}
-                        </div>
                         <h1 className="text-4xl font-bold mt-2">{course.title}</h1>
                         <p className="text-gray-600 mt-4">{course.description}</p>
 
                         <div className="mt-6 flex flex-wrap gap-3">
                             <Badge label={`Duration: ${course.duration} Hours.`} />
-                            {course.fees ? <Badge label={`Fees: ${course.fees}`} /> : null}
-                            {course.eligibility ? (
-                                <Badge label={`Eligibility: ${course.eligibility}`} />
-                            ) : null}
                         </div>
 
                         <div className="mt-7 flex gap-3">

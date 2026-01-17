@@ -7,7 +7,7 @@ export default function CourseCard({ course }: { course: Course }) {
     return (
         <Link
             href={`/courses/${course.slug}`}
-            className="rounded-2xl border bg-white overflow-hidden hover:shadow-lg transition"
+            className="rounded-2xl border bg-white overflow-hidden hover:shadow-lg transition  max-h-64 "
         >
             <div className="relative h-44">
                 <Image
@@ -18,16 +18,15 @@ export default function CourseCard({ course }: { course: Course }) {
                 />
             </div>
 
-            <div className="p-5">
-                <div className="text-xs text-gray-500">
-                    {course.category} • {course.duration}
+            <div className="flex flex-col justify-between p-5">
+                <div className="h-28" style={{height: '100px'}}>
+                    <div className="text-xs text-gray-500">
+                        {course.duration} Hrs.
+                    </div>
+                    <h3 className="font-semibold text-lg">{course.title}</h3>
                 </div>
-                <h3 className="font-semibold text-lg mt-2">{course.title}</h3>
-                <p className="text-gray-600 text-sm mt-2 line-clamp-2">
-                    {course.shortDescription}
-                </p>
 
-                <div className="mt-4 inline-flex text-sm font-medium">
+                <div className="text-sm font-medium">
                     View details →
                 </div>
             </div>

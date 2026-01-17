@@ -21,10 +21,10 @@ export default function SwiperHome() {
                 pagination={{ clickable: true }}
             >
                 <SwiperSlide>
-                    <img className="w-full h-full" src="https://arenauttarpara.com/images/banner8.jpg" alt="" />
+                    <img className="w-full h-full" src="/images/Banner.png" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="w-full h-full" src="https://images.jdmagicbox.com/v2/comp/delhi/a2/011pxx11.xx11.171117145745.f4a2/catalogue/arena-animation-gtb-nagar-delhi-graphic-training-institutes-i5oiybl6ip.jpg" alt="" />
+                    <img className="w-full h-full" src="/images/arena-animation-banner.jpg" alt="" />
                 </SwiperSlide>
             </Swiper>
         </div>

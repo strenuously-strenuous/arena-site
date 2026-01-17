@@ -75,25 +75,21 @@ export default function FeaturedCourses() {
                     </defs>
                 </svg>
             </h3>
-            <div className="container flex gap-3.5 mx-auto mb-18 flex-wrap ">
-                {/* {CoursesData.map((item, index) => (
-                    <CardProduct title={item.title} subtitle={item.subtitle} image={item.image} />
-                ))} */}
-                <section className="mt-16">
+            <div className="container flex gap-3.5 mx-auto flex-wrap ">
+                <section className="mt-6">
                     <div className="flex items-end justify-between gap-4">
                         <div>
-                            <h2 className="text-2xl font-bold">Popular Courses</h2>
                             <p className="text-gray-600 mt-1">
                                 Industry-relevant programs designed for careers.
                             </p>
                         </div>
 
-                        <Link href="/courses" className="text-sm font-medium underline">
-                            View all courses →
+                        <Link href="/courses" className="text-sm font-medium">
+                            View all
                         </Link>
                     </div>
 
-                    <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         {courses.map((course) => (
                             course.featured == true ? <CourseCard key={course.slug} course={course} /> : ''
 

@@ -16,7 +16,6 @@ events
 awards
 quick CTA section
 footer
-`
 
 
 

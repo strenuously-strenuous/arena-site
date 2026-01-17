@@ -15,10 +15,10 @@ export const courses: Course[] = [
     {
         title: "Advanced Program in Animation with Unreal Engine",
         slug: "advanced-program-in-animation-with-unreal-engine",
-        featured: true,
+        featured: false,
         description:
             "AAIPP Advanced Program in Animation with Unreal Engine Step into a world where your creativity becomes reality. The Advanced Program in Animation with Unreal Engine empowers you to bring characters to life, craft stunning 3D worlds and create cinematic experiences. Master industry-leading tools and unlock your potential in animation, virtual production and Unreal Engine, launching your career to new heights.",
-        heroImage: "https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg",
+        heroImage: "/images/Game/01.jpg",
         duration: "576",
         softwareAndToolsCovered: ["Adobe Illustrator CC", "Adobe Photoshop CC", "Storyboarder", "Adobe Premiere Pro CC", "Adobe Audition CC", "Adobe Animate CC", "Adobe After Effects CC", "Autodesk Maya", "nCloth", "XGen", "Maxon ZBrush", "Adobe Substance Painter", "Reality Capture", "Unreal Engine", "MetaHuman", "Gen AI Tools"],
         jobProfiles: ["Concept Artist", "Character Designer", "Storyboard Artist", "3D Modeler", "Texturing Artist", "Lighting Artist", "3D Animator", "Rigging Artist", "3D Generalist", "3D Designer", "3D Product Designer", "Unreal Generalist", "Real-time 3D Artist", "3D Visualizer"],
@@ -70,7 +70,7 @@ export const courses: Course[] = [
         featured: true,
         description:
             "Immerse yourself in the realm of visual magic with the Advanced Program in Visual Effects. This program equips you with the skills to bring the most imaginative ideas to life through VFX. Learn to create realistic simulations, compelling composites, and breathtaking effects using industry-standard tools like Houdini and Nuke. Perfect your craft and get ready to shape the visual landscapes of film and digital media.",
-        heroImage: "https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg",
+        heroImage: "/images/Game/01.png",
         duration: "604",
         softwareAndToolsCovered: ["Adobe Illustrator CC", "Adobe Photoshop CC", "Storyboarder", "Adobe Premiere Pro CC", "Adobe Audition CC", "Adobe Animate CC", "Adobe After Effects CC", "Autodesk Maya", "nCloth", "XGen", "Adobe Substance Painter", "Reality Capture", "Houdini", "Silhouette", "3D Equalizer", "Nuke", "Gen AI Tools"],
         jobProfiles: ["Concept Artist", "Character Designer", "Storyboard Artist", "3D Artist", "Lighting Artist", "3D Generalist", "3D Designer", "3D Product Designer", "Compositor", "Matchmove Artist", "VFX Generalist", "FX Artist", "Motion Graphics Artist", "Matte Painter", "Video Editor", "Roto Artist"],
@@ -127,7 +127,7 @@ export const courses: Course[] = [
         featured: true,
         description:
             "Transform spaces with your creativity in the Advanced Program in Architectural Visualization and Interior Design. Learn to bring architectural concepts to life using powerful tools like AutoCAD, 3ds Max, Blender and Unreal Engine. From realistic textures to immersive virtual walkthroughs, this program empowers you to visualize interiors and architecture with stunning accuracy, preparing you for a career that shapes the built environment.",
-        heroImage: "https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg",
+        heroImage: "/images/Game/03.png",
         duration: "580",
         softwareAndToolsCovered: ["Adobe Illustrator CC", "Adobe Photoshop CC", "Storyboarder", "Adobe Premiere Pro CC", "Adobe Audition CC", "Adobe Animate CC", "Adobe After Effects CC", "Autodesk 3ds Max", "V-Ray", "Adobe Substance Painter", "SketchUp", "Blender", "Unreal Engine", "Twinmotion", "Gen AI Tools"],
         jobProfiles: ["Concept Artist", "3D Artist", "Lighting Artist", "3D Generalist", "3D Designer", "3D Product Designer", "Archviz Artist", "Interior Visualization Artist", "Unreal Engine Archviz Specialist", "3D Rendering Artist"],
@@ -186,7 +186,7 @@ export const courses: Course[] = [
         featured: true,
         description:
             "Enter the world of high-impact visual storytelling with the Broadcast Design program. This course teaches you how to craft captivating broadcast graphics and motion design for television, lm and digital media. With tools like Cinema4D and 3ds Max, you'll learn to create dynamic visuals that captivate audiences, preparing you to design the future of broadcast media",
-        heroImage: "https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg",
+        heroImage: "/images/Graphic/01.jpg",
         duration: "408",
         softwareAndToolsCovered: ["Adobe Illustrator CC", "Adobe Photoshop CC", "Storyboarder", "Adobe Premiere Pro CC", "Adobe Audition CC", "Adobe Animate CC", "Adobe After Effects CC", "Autodesk 3ds Max", "V-Ray", "Cinema 4D", "Gen AI Tools"],
         jobProfiles: ["Concept Artist", "Storyboard Artist", "3D Artist", "Lighting Artist", "3D Generalist", "3D Designer", "Broadcast Designer", "Motion Graphics Designer", "Video Editor", "Motion Design Visualizer"],
@@ -231,7 +231,7 @@ export const courses: Course[] = [
         featured: false,
         description:
             "Unlock your creative potential with the Digital Content Creation program. This course empowers you to design stunning visuals, create engaging motion graphics and craft seamless user experiences. Learn the fundamentals of design, photography, typography and web development while mastering tools like Adobe Creative Suite, Figma and WordPress. Whether you're creating social media visuals or building interactive websites, this program prepares you to succeed in the dynamic world of digital content.",
-        heroImage: "https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg",
+        heroImage: "/images/Graphic/02.jpg",
         duration: "352",
         softwareAndToolsCovered: ["Adobe Illustrator CC", "Adobe Photoshop CC", "Adobe InDesign CC", "Canva", "Adobe Dimensions", "Adobe Premiere Pro CC", "Adobe Audition CC", "Adobe Animate CC", "Adobe After Effects CC", "DaVinci", "Figma", "Draw.io", "VS Code", "WordPress", "XAMPP", "Gen AI Tools"],
         jobProfiles: ["Graphic Designer", "Digital Illustrator", "UI Artist", "Motion Graphics Artist", "UX Designer", "Social Media Designer", "Video Editor", "Front-end Designer", "UX Researcher", "Web Designer"],
@@ -290,7 +290,7 @@ export const courses: Course[] = [
         slug: 'next-gen-graphic-design-and-web-development',
         featured: true,
         description: 'The Graphics, Web Design and Development program empowers you to create stunning visuals and interactive web experiences. Learn the fundamentals of graphic design, typography and branding, alongside the technical skills needed for modern web development. Master tools like Adobe Creative Suite, Figma and WordPress and dive into responsive design, SEO and server-side scripting. Whether you’re designing for social media or building dynamic websites, this program equips you with the skills to thrive in the digital content world.',
-        heroImage: "https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg",
+        heroImage: "/images/Graphic/03.jpg",
         duration: "290",
         softwareAndToolsCovered: ["Adobe Illustrator CC", "Adobe Photoshop CC", "Adobe InDesign CC", "Canva", "Adobe Dimensions", "Draw.io", "Figma", "HTML5", "CSS3", "Bootstrap", "JavaScript", "WordPress", "XAMPP", "Google AdWords & Analytics", "PHP & MySQL", "Gen AI Tools"],
         jobProfiles: ["Graphic Designer", "Digital Illustrator", "UI Artist", "Social Media Designer", "Front-end Designer", "UX Researcher", "Web Designer", "Web Developer"],
@@ -442,7 +442,7 @@ export const courses: Course[] = [
         slug: "master-program-in-game-art-design-and-development-with-arvr-xr",
         featured: false,
         description: "The Master Program in Game Art, Design and Development with ARVR-XR prepares you to create immersive digital experiences across games, augmented reality (AR), virtual reality (VR) and extended reality (XR). From mastering game art and design to developing real-time game worlds and AR/VR experiences, this comprehensive program equips you with advanced skills in Unreal Engine, Unity and 3D modeling, setting you on a path to becoming an expert in the rapidly evolving world of game and immersive media development.",
-        heroImage: "https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg",
+        heroImage: "/images/Game/05.png",
         duration: "818",
         softwareAndToolsCovered: ["Adobe Illustrator CC", "Adobe Photoshop CC", "Figma", "Adobe Animate CC", "GDevelop.io", "Autodesk Maya", "Maxon ZBrush", "Adobe Substance Painter", "Unreal Engine", "Blender", "Adobe Substance Designer", "Adobe Substance 3D Stager", "Reality Capture", "Unity", "Spark AR", "Gen AI Tools"],
         jobProfiles: ["Game Designer", "Game Producer", "Level Designer", "2D Game Artist", "UI Artist", "3D Game Artist", "Technical Artist", "Game Environment Artist", "Cinematic Artist", "Unreal Generalist", "Real-time 3D Artist", "Game Developer", "AR/VR Developer"],

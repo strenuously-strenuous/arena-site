@@ -20,9 +20,9 @@ export default function Home() {
     <div className="">
       <NavbarPage />
 
-      <div className="relative mt-15" style={{ minHeight: 600 }}>
+      {/* <div className="relative mt-15" style={{ minHeight: 600 }}>
         <Image className="" src={"/images/banner.png"} fill alt="Banner" />
-      </div>
+      </div> */}
 
 
       <HeroSection />
