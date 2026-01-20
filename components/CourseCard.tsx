@@ -7,7 +7,7 @@ export default function CourseCard({ course }: { course: Course }) {
     return (
         <Link
             href={`/courses/${course.slug}`}
-            className="rounded-2xl border bg-white overflow-hidden hover:shadow-lg transition  max-h-64 "
+            className="rounded-2xl border bg-white overflow-hidden hover:shadow-lg transition"
         >
             <div className="relative h-44">
                 <Image

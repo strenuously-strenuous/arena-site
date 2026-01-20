@@ -22,7 +22,7 @@ import RippleGrid from '@/components/RippleGrid';
 
 const HeroSection = () => {
   return (
-    <section className='flex flex-1 flex-col justify-between overflow-x-hidden'>
+    <section className='flex flex-1 flex-col text-white justify-between overflow-x-hidden absolute left-0 right-0' style={{ top: 'calc(50% - 300px)', right: 0 }}>
       {/* Hero Content */}
 
       <div className='relative'>
@@ -40,9 +40,9 @@ const HeroSection = () => {
         </div>
 
         <div className='absolute start-0 end-0 top-0 bottom-0 mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center py-6 sm:px-6 lg:px-8'>
-          <div className=' flex items-center gap-2.5 rounded-full border px-3 py-2 text-white'>
-            <Badge>GenAI-Powered</Badge>
-            <span className='font-semibold text-black'>Courses</span>
+          <div className=' flex items-center gap-2.5 rounded-full border px-3 py-2 text-white text-xs'>
+            <Badge className='text-xs'>GenAI-Powered</Badge>
+            <span className='font-semibol'>Courses</span>
           </div>
 
           <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl'>
@@ -82,13 +82,13 @@ const HeroSection = () => {
             Power!
           </h1>
 
-          <p className='text-muted-foreground mt-8 '>
+          <p className='mt-8 '>
             Arena Animation empowers you with industry-focused training in <strong>Animation</strong>, <strong>VFX</strong>, <strong>Gaming</strong>, <strong>Digital Design</strong>, <strong>UI/UX</strong>, and <strong>Web Design & Development</strong>. With expert mentors, practical learning, and real-world projects, we help turn creative passion into a successful career.
 
 
           </p>
 
-          <Button size='lg' asChild className='text-white'>
+          <Button size='lg' asChild>
             <Link href='#'>Enquire Now</Link>
           </Button>
         </div>

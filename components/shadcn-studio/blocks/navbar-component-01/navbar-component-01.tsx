@@ -1,6 +1,10 @@
+'use client'
+
 import { MenuIcon, PhoneCallIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import clsx from 'clsx'
+import { usePathname } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -18,7 +22,10 @@ type NavigationItem = {
   href: string
 }[]
 
-const Navbar = ({ navigationData }: { navigationData: NavigationItem }) => {
+
+const Navbar = ({ navigationData, href }: { navigationData: NavigationItem, href: string }) => {
+  const pathname = usePathname();
+
   return (
     <header className='bg-background sticky top-0 z-50'>
       <div className='mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-2 sm:px-6'>
@@ -27,9 +34,23 @@ const Navbar = ({ navigationData }: { navigationData: NavigationItem }) => {
             <Image src="/images/logo-black.png" width={100} height={100} alt='logo' />
           </Link>
           <div className='md:flex hidden gap-6'>
-            {navigationData.map((item, index) => (
-              <Link href={item.href}>{item.title}</Link>
-            ))}
+            {navigationData.map((item, index) => {
+              const isActive =
+                pathname === item.href || pathname.startsWith(item.href + '/')
+
+              return (
+                <Link
+                  key={index}
+                  href={item.href}
+                  className={clsx(
+                    'transition',
+                    isActive && 'text-primary font-bold'
+                  )}
+                >
+                  {item.title}
+                </Link>
+              )
+            })}
           </div>
           <div className='text-end'>
             <a href="tel:9625277697" className='transition md:flex hidden gap-3 border-primary px-4 py-1 hover:text-primary'>
