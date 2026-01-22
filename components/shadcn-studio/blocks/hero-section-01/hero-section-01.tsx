@@ -17,12 +17,9 @@ import RippleGrid from '@/components/RippleGrid';
   />
 </div>
 
-
-
-
 const HeroSection = () => {
   return (
-    <section className='flex flex-1 flex-col text-white justify-between overflow-x-hidden absolute left-0 right-0' style={{ top: 'calc(50% - 300px)', right: 0 }}>
+    <section className='flex flex-1 flex-col  justify-between overflow-x-hidden absolute left-0 right-0' style={{ top: 'calc(50% - 300px)', right: 0 }}>
       {/* Hero Content */}
 
       <div className='relative'>
@@ -40,12 +37,12 @@ const HeroSection = () => {
         </div>
 
         <div className='absolute start-0 end-0 top-0 bottom-0 mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center py-6 sm:px-6 lg:px-8'>
-          <div className=' flex items-center gap-2.5 rounded-full border px-3 py-2 text-white text-xs'>
+          <div className=' flex items-center gap-2.5 rounded-full border border-gray-300 px-3 py-2 text-white text-xs mt-5'>
             <Badge className='text-xs'>GenAI-Powered</Badge>
-            <span className='font-semibol'>Courses</span>
+            <span className='font-bold text-white'>Courses</span>
           </div>
 
-          <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl'>
+          <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl text-white'>
             Unleash Your
             <br />
             <span className='relative text-9xl'>
@@ -82,7 +79,7 @@ const HeroSection = () => {
             Power!
           </h1>
 
-          <p className='mt-8 '>
+          <p className='mt-8 text-white'>
             Arena Animation empowers you with industry-focused training in <strong>Animation</strong>, <strong>VFX</strong>, <strong>Gaming</strong>, <strong>Digital Design</strong>, <strong>UI/UX</strong>, and <strong>Web Design & Development</strong>. With expert mentors, practical learning, and real-world projects, we help turn creative passion into a successful career.
 
 

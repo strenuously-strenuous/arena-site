@@ -18,9 +18,11 @@ export default function Home() {
   return (
     <div className="">
 
-      <div className="relative" style={{ height: '90vh' }}>
+      <div className="relative" style={{ minHeight: '700px' }}>
         <NavbarPage />
-        <Image className="object-cover h-dvh h-screen" src={"/images/ju-jinhwan.jpg"} fill alt="Banner" />
+        <video autoPlay muted loop className="w-full object-cover h-dvh h-screen" src="/videos/ju-jinhwan.mp4" style={{ maxHeight: '950px' }}></video>
+        {/* <Image className="object-cover h-dvh h-screen" src={"/images/temp.jpg"} fill alt="Banner" /> */}
+        <div className="w-full object-cover h-dvh h-screen bg-white absolute z-10" style={{ maxHeight: '1000px' }}></div>
         <HeroSection />
       </div>
       <Stats />

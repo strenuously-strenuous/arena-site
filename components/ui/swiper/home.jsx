@@ -12,7 +12,7 @@ import 'swiper/css/scrollbar';
 
 export default function SwiperHome() {
     return (
-        <div className='rounded-[24px] container mx-auto overflow-hidden' id='swiper-home'>
+        <div className='rounded-sm container mx-auto overflow-hidden' id='swiper-home'>
             <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
