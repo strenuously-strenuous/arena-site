@@ -6,14 +6,18 @@ import WhyUs from "@/components/ui/common/whyus/page";
 import Footer from "@/components/ui/common/footer/page";
 import Image from "next/image";
 
+import SuccessFearsBlog from "./posts/success-doesnt-come-easy/page";
+
 export default function Blog() {
     return (
         <>
             <NavbarPage />
             <main className="max-w-6xl mx-auto px-6 py-10">
-                <div className="bg-amber-800 py-12">
+                {/* <div className="bg py-12">
                     <h1 className="text-4xl font-semibold text-center">Blog</h1>
-                </div>
+                </div> */}
+
+                <SuccessFearsBlog />
             </main >
             <WhyUs />
             <Jumbotron />
