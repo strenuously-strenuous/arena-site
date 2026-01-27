@@ -41,8 +41,8 @@ export default function FeaturedCourses() {
     // ];
 
     return (
-        <div>
-            <h3 className="text-center text-6xl font-bold mb-12 text-primary relative p-2">
+        <div className="my-16">
+            <h3 className="text-center text-6xl font-bold text-primary relative p-2">
                 <span className="">
                     Courses
                 </span>

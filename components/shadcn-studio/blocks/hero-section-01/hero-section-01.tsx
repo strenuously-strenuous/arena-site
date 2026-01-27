@@ -2,30 +2,17 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-import RippleGrid from '@/components/RippleGrid';
-
-<div style={{ position: 'relative', height: '500px', overflow: 'hidden' }}>
-  <RippleGrid
-    enableRainbow={true}
-    gridColor="#ffffff"
-    rippleIntensity={0.05}
-    gridSize={10}
-    gridThickness={10}
-    mouseInteraction={true}
-    mouseInteractionRadius={1.2}
-    opacity={0.9}
-  />
-</div>
+// import RippleGrid from '@/components/RippleGrid';
 
 const HeroSection = () => {
   return (
-    <section className='flex flex-1 flex-col  justify-between overflow-x-hidden absolute left-0 right-0' style={{ top: 'calc(50% - 300px)', right: 0 }}>
+    <section className='flex flex-1 flex-col  justify-between overflow-x-hidden absolute left-0 right-0 z-50' style={{ top: 'calc(50% - 300px)', right: 0 }}>
       {/* Hero Content */}
 
       <div className='relative'>
         <div style={{ width: '100%', height: 600, position: 'relative' }}>
-          <RippleGrid
-            enableRainbow={false}
+          {/* <RippleGrid
+            enableRainbow={true}
             gridColor="#F2E30C"
             rippleIntensity={0.05}
             gridSize={10}
@@ -33,13 +20,12 @@ const HeroSection = () => {
             mouseInteraction={true}
             mouseInteractionRadius={1.2}
             opacity={0.1}
-          />
+          /> */}
         </div>
 
         <div className='absolute start-0 end-0 top-0 bottom-0 mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center py-6 sm:px-6 lg:px-8'>
-          <div className=' flex items-center gap-2.5 rounded-full border border-gray-300 px-3 py-2 text-white text-xs mt-5'>
-            <Badge className='text-xs'>GenAI-Powered</Badge>
-            <span className='font-bold text-white'>Courses</span>
+          <div className=' flex items-center gap-2.5 rounded-full border border-gray-300 px-1 py-1  text-xs mt-5'>
+            <Badge className='text-xs bg-white text-dark'>GenAI-Powered Courses</Badge>
           </div>
 
           <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl text-white'>
@@ -70,8 +56,8 @@ const HeroSection = () => {
                     y2='66.6308'
                     gradientUnits='userSpaceOnUse'
                   >
-                    <stop stopColor='var(--primary)' />
-                    <stop offset='1' stopColor='var(--primary-foreground)' />
+                    <stop stopColor='#fff' />
+                    <stop offset='1' stopColor='#fff' />
                   </linearGradient>
                 </defs>
               </svg>

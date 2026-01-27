@@ -10,10 +10,10 @@ import GradientText from '@/components/GradientText'
 
 export default function Stats() {
     return (
-        <div className="translate-y-2/4" style={{ translate: ' 0 -50%' }}>
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 bg-white py-10 border-2 shadow-lg outline-2 outline-red-700 border-2 border-yellow-500">
-                <dl className="grid grid-cols-2 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
-                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+        <div className="translate-y-2/4 relative z-20" style={{ translate: ' 0 -50%' }}>
+            <div className="mx-auto max-w-7xl  ">
+                <dl className="grid grid-cols-2 gap-5 text-center lg:grid-cols-4">
+                    <div className="w-full mx-auto flex max-w-xs flex-col gap-y-4 bg-white px-3 lg:px-3  py-8 border-2 shadow-lg outline-2 outline-red-700 border-2 border-yellow-500">
                         <GradientText
                             colors={["#e31510", "#f2e416"]}
                             className="custom-class"
@@ -26,7 +26,7 @@ export default function Stats() {
                         </GradientText>
                         <dt className="text-base/7 text-black">Years of Experience</dt>
                     </div>
-                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <div className="w-full mx-auto flex max-w-xs flex-col gap-y-4 bg-white px-3 lg:px-3  py-8 border-2 shadow-lg outline-2 outline-red-700 border-2 border-yellow-500">
                         <GradientText
                             colors={["#e31510", "#f2e416"]}
                             className="custom-class"
@@ -40,7 +40,7 @@ export default function Stats() {
                         </GradientText>
                         <dt className="text-base/7 text-black">Students Trained</dt>
                     </div>
-                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <div className="w-full mx-auto flex max-w-xs flex-col gap-y-4 bg-white px-3 lg:px-3  py-8 border-2 shadow-lg outline-2 outline-red-700 border-2 border-yellow-500">
                         <GradientText
                             colors={["#e31510", "#f2e416"]}
                             className="custom-class"
@@ -53,7 +53,7 @@ export default function Stats() {
                         </GradientText>
                         <dt className="text-base/7 text-black">Centres</dt>
                     </div>
-                    <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <div className="w-full mx-auto flex max-w-xs flex-col gap-y-4 bg-white px-3 lg:px-3  py-8 border-2 shadow-lg outline-2 outline-red-700 border-2 border-yellow-500">
                         <GradientText
                             colors={["#e31510", "#f2e416"]}
                             className="custom-class"
