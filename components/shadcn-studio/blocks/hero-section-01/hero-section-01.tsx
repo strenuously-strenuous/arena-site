@@ -23,15 +23,15 @@ const HeroSection = () => {
           /> */}
         </div>
 
-        <div className='absolute start-0 end-0 top-0 bottom-0 mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center py-6 sm:px-6 lg:px-8'>
-          <div className=' flex items-center gap-2.5 rounded-full border border-gray-300 px-1 py-1  text-xs mt-5'>
+        <div className='absolute start-0 end-0 top-0 bottom-0 mx-auto flex max-w-7xl flex-col items-center px-4 text-center py-6 sm:px-6 lg:px-8'>
+          <div className='mb-4 flex items-center gap-2.5 rounded-full border border-gray-300 px-1 py-1  text-xs mt-5'>
             <Badge className='text-xs bg-white text-dark'>GenAI-Powered Courses</Badge>
           </div>
 
           <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl text-white'>
             Unleash Your
             <br />
-            <span className='relative text-9xl'>
+            <span className='relative text-6xl  lg:text-9xl'>
               Creative
               <svg
                 width='223'
@@ -65,7 +65,7 @@ const HeroSection = () => {
             Power!
           </h1>
 
-          <p className='mt-8 text-white'>
+          <p className='my-10 lg:my-16 text-white'>
             Arena Animation empowers you with industry-focused training in <strong>Animation</strong>, <strong>VFX</strong>, <strong>Gaming</strong>, <strong>Digital Design</strong>, <strong>UI/UX</strong>, and <strong>Web Design & Development</strong>. With expert mentors, practical learning, and real-world projects, we help turn creative passion into a successful career.
 
 

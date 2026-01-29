@@ -5,7 +5,7 @@ import { navigationData } from '@/data/navigationData'
 const NavbarPage = () => {
   return (
     <div className=''>
-      <Navbar navigationData={navigationData} />
+      <Navbar href='' navigationData={navigationData} />
     </div>
   )
 }

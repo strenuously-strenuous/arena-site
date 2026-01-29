@@ -20,14 +20,14 @@ export default function Home() {
 
       <div className="relative" style={{ minHeight: '900px' }}>
         <NavbarPage />
-        <video autoPlay muted loop className="w-full object-cover absolute top-0 bottom-0" src="/videos/ju-jinhwan.mp4" style={{ maxHeight: '100%' }}></video>
+        <video autoPlay muted loop className="h-full w-full object-cover absolute top-0 bottom-0" src="/videos/ju-jinhwan.mp4" style={{ maxHeight: '100%' }}></video>
         {/* <Image className="object-cover h-dvh h-screen" src={"/images/temp.jpg"} fill alt="Banner" /> */}
         <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #fff40026, #000)" }}></div>
         <HeroSection />
       </div>
       <Stats />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 mb-16 mt-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 mb-16 mt-10">
 
         <div className="px-5">
           <h1 className="text-4xl font-bold">Arena Animation Patel Nagar</h1>
