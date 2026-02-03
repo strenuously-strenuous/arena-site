@@ -135,7 +135,6 @@ export default function Contact() {
                                         Message
                                     </label>
                                     <textarea
-                                        rows="4"
                                         placeholder="Your Message"
                                         className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F22E2E]"
                                     ></textarea>

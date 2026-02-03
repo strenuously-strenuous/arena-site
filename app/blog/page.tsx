@@ -6,10 +6,11 @@ import WhyUs from "@/components/ui/common/whyus/page";
 import Footer from "@/components/ui/common/footer/page";
 import Image from "next/image";
 import Link from "next/link"
-import { getAllBlogs } from "@/lib/blog"
+import { Blog as BlogType, getAllBlogs } from "@/lib/blog"
+
 
 export default function Blog() {
-    const blogs = getAllBlogs()
+    const blogs: BlogType[] = getAllBlogs()
 
     return (
         <>
