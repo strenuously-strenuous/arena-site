@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram } from "lucide-react"
+import { footerData } from "@/data/footerData";
 
 export default function Footer() {
     return (
@@ -14,79 +14,27 @@ export default function Footer() {
                                 <Image src="/images/logo-black.png" width={300} height={300} alt='logo' />
                             </Link>
                         </div>
+
                         <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-4">
-                            <div>
-                                <h2 className="mb-6 text-sm font-semibold text-heading uppercase text-muted-foreground">Resources</h2>
-                                <ul className="text-body font-medium">
-                                    <li className="">
-                                        <Link href="careers" className="hover:underline">Careers</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="contact" className="hover:underline">Contact</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2 className="mb-6 text-sm font-semibold text-heading uppercase text-muted-foreground">Courses</h2>
-                                <ul className="text-body font-medium">
-                                    <li className="">
-                                        <Link href="careers" className="hover:underline">Animation</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="contact" className="hover:underline">VFX</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="placement" className="hover:underline">Digital Design</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="events" className="hover:underline">Gaming And Interactive Design</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="admission-enquiry" className="hover:underline">Architecture Visualization</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="admission-enquiry" className="hover:underline">Broadcast</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="admission-enquiry" className="hover:underline">Digital Marketing</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="admission-enquiry" className="hover:underline">Short Term Courses</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2 className="mb-6 text-sm font-semibold text-heading uppercase text-muted-foreground">Quick Links</h2>
-                                <ul className="text-body font-medium">
-                                    <li className="">
-                                        <Link href="careers" className="hover:underline">Careers</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="contact" className="hover:underline">Contact</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="placement" className="hover:underline">Placement</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="events" className="hover:underline">Events</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="admission-enquiry" className="hover:underline">Admission Enquiry</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2 className="mb-6 text-sm font-semibold text-heading uppercase text-muted-foreground">Company</h2>
-                                <ul className="text-body font-medium">
-                                    <li className="">
-                                        <Link href="#" className="hover:underline">Privacy Policy</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="#" className="hover:underline">Terms &amp; Conditions</Link>
-                                    </li>
-                                </ul>
-                            </div>
+                            {footerData.map((item, index) => (
+                                <div key={index}>
+                                    <h2 className="mb-6 text-sm font-semibold uppercase text-muted-foreground">
+                                        {item.title}
+                                    </h2>
+
+                                    <ul className="text-body font-medium space-y-2">
+                                        {Object.entries(item.links).map(([key, value]) => (
+                                            <li key={key}>
+                                                <Link href={value} className="hover:underline">
+                                                    {key}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
                         </div>
+
                     </div>
                     <hr className="my-6 border-default sm:mx-auto lg:my-8" />
                     <div className="sm:flex sm:items-center sm:justify-between">

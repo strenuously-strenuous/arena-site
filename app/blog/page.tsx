@@ -23,27 +23,58 @@ export default function Blog() {
             </div>
 
 
-            <div className="container mx-auto py-5">
-                <div className=" grid gap-6 md:grid-cols-2">
+            <div className="container mx-auto px-4 py-12">
+                {/* Section Header */}
+                <div className="mb-10 max-w-2xl">
+                    <h1 className="text-3xl md:text-4xl font-bold text-[#F22E2E]">
+                        Insights & Articles
+                    </h1>
+                    <p className="mt-3 text-gray-600">
+                        Explore articles on creativity, design, animation, technology, and career
+                        growth—written to inspire students and professionals in the creative industry.
+                    </p>
+                </div>
+
+                {/* Blog Grid */}
+                <div className="grid gap-8 md:grid-cols-2">
                     {blogs.map((blog) => (
                         <Link
                             key={blog.slug}
                             href={`/blog/${blog.slug}`}
-                            className="border rounded-lg p-5 hover:shadow-md transition"
+                            className="group border border-gray-200 rounded-2xl overflow-hidden bg-white hover:shadow-lg transition"
                         >
-                            <h2 className="text-xl font-semibold">
-                                {blog.title}
-                            </h2>
-                            <p className="text-sm text-muted-foreground mt-2">
-                                {blog.description}
-                            </p>
-                            <p className="text-xs mt-4">
-                                {blog.date}
-                            </p>
+                            {/* Thumbnail */}
+                            <div className="h-48 bg-gray-100 overflow-hidden">
+                                <img
+                                    src={blog.image || "https://placehold.co/600x400"}
+                                    alt={blog.title}
+                                    className="h-full w-full object-cover group-hover:scale-105 transition duration-300"
+                                />
+                            </div>
+
+                            {/* Content */}
+                            <div className="p-6">
+                                <h2 className="text-xl font-semibold text-gray-900 group-hover:text-[#F22E2E] transition">
+                                    {blog.title}
+                                </h2>
+
+                                <p className="text-sm text-gray-600 mt-3 leading-relaxed line-clamp-3">
+                                    {blog.description}
+                                </p>
+
+                                {/* Meta */}
+                                <div className="mt-5 flex items-center justify-between text-xs text-gray-500">
+                                    <span>{blog.date}</span>
+                                    <span className="font-medium text-[#F22E2E]">
+                                        Read Article →
+                                    </span>
+                                </div>
+                            </div>
                         </Link>
                     ))}
                 </div>
             </div>
+
 
             <AccordionDemo />
             <Footer />

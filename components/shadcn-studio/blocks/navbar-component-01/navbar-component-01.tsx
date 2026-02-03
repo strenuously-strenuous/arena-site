@@ -31,7 +31,7 @@ const Navbar = ({ navigationData, href }: { navigationData: NavigationItem, href
       <div className='mx-auto flex container items-center justify-between gap-8 px-4 py-2 sm:px-6'>
         <div className='flex flex-1 items-center gap-8 font-medium justify-between lg:gap-16'>
           <Link href='/'>
-            <Image src="/images/logo.png" width={100} height={100} alt='logo' />
+            <Image src="/images/arena logO WHITE.png" width={100} height={100} alt='logo' />
           </Link>
           <div className='md:flex hidden gap-6'>
             {navigationData.map((item, index) => {
