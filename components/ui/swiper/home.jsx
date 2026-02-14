@@ -24,7 +24,7 @@ export default function SwiperHome() {
                     <img className="w-full h-full" src="/images/Banner.png" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="w-full h-full" src="/images/arena-animation-banner.jpg" alt="" />
+                    <img className="w-full h-full" src="/images/drive-01/banner1.jpg" alt="" />
                 </SwiperSlide>
             </Swiper>
         </div>

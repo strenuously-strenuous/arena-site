@@ -22,6 +22,14 @@ export default function Blog() {
                 <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #fff40026, #000)" }}></div>
                 <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
             </div>
+            <div className="prose">
+                <h1>Hello World</h1>
+                <p>This is a paragraph.</p>
+                <ul>
+                    <li>Item one</li>
+                    <li>Item two</li>
+                </ul>
+            </div>
 
 
             <div className="container mx-auto px-4 py-12">

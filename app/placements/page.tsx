@@ -5,6 +5,7 @@ import Jumbotron from "@/components/ui/common/jumbotron/page";
 import WhyUs from "@/components/ui/common/whyus/page";
 import Footer from "@/components/ui/common/footer/page";
 import Image from "next/image";
+import { PlacementBrands } from "@/data/placementBrands";
 
 export default function Placements() {
     return (
@@ -40,9 +41,9 @@ export default function Placements() {
                         </div>
 
                         <img
-                            src="https://placehold.co/600x400"
+                            src="/images/placement.png"
                             alt="Student portfolio review session"
-                            className="rounded-xl shadow-md"
+                            className="rounded-xl "
                         />
                     </div>
                 </section>
@@ -139,24 +140,24 @@ export default function Placements() {
                 </section>
 
                 {/* Recruiters */}
-                <section className="bg-[#F22E2E] py-20 text-white">
-                    <div className="max-w-6xl mx-auto px-6 text-center">
-                        <h2 className="text-3xl font-bold mb-6">
-                            Studios & Companies Our Students Work With
-                        </h2>
-                        <p className="text-white/90 max-w-3xl mx-auto mb-10">
-                            Arena Animation students have been placed across leading animation
-                            studios, VFX houses, gaming companies, advertising agencies,
-                            and digital production studios in India and abroad.
-                        </p>
-
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+                <section className="py-10" id="placement-brands">
+                    <div className="mx-auto text-center">
+                        <div className=" py-6 mb-8">
+                            <h2 className="text-3xl font-bold mb-6">
+                                Studios & Companies Our Students Work With
+                            </h2>
+                            <p className=" max-w-3xl mx-auto ">
+                                Arena Animation students have been placed across leading animation
+                                studios, VFX houses, gaming companies, advertising agencies,
+                                and digital production studios in India and abroad.
+                            </p>
+                        </div>
+                        <div className="max-w-6xl mx-auto grid grid-cols-3 sm:grid-cols-6 gap-6">
+                            {PlacementBrands.map((item) => (
                                 <img
-                                    key={item}
-                                    src="https://placehold.co/200x100"
+                                    src={`/images/brands/${item.url}`}
                                     alt="Recruiter logo"
-                                    className="bg-white rounded-md p-4 mx-auto"
+                                    className=""
                                 />
                             ))}
                         </div>

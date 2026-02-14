@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Image from "next/image";
 import { courses } from "@/data/courses";
 import CourseCard from "@/components/CourseCard";
@@ -8,12 +11,21 @@ import Jumbotron from "@/components/ui/common/jumbotron/page";
 import WhyUs from "@/components/ui/common/whyus/page";
 import Footer from "@/components/ui/common/footer/page";
 
-export const metadata = {
-    title: "Courses | Your Institute Name",
-    description: "Explore our career-focused courses and training programs.",
-};
+const categories = [
+    { id: 'all', label: 'All Courses' },
+    { id: 'AVGC', label: 'Animation & VFX' },
+    { id: 'GID', label: 'Game & Immersive Design' },
+    { id: 'DCC', label: 'Digital Content Creation' },
+    { id: 'AAIP', label: 'Advanced 3D & Architecture' },
+];
 
 export default function CoursesPage() {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+
+    const filteredCourses = selectedCategory === 'all'
+        ? courses
+        : courses.filter(course => course.category === selectedCategory);
+
     return (
         <>
             <div className="relative min-h-78">
@@ -29,15 +41,38 @@ export default function CoursesPage() {
             <main className="px-6 py-10 container mx-auto">
                 <div className="mb-8">
                     <p className="text-gray-600 mt-2">
-                        Choose from {courses.length}+ industry-relevant courses.
+                        Choose from {filteredCourses.length}+ industry-relevant courses.
                     </p>
                 </div>
 
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    {courses.map((course) => (
-                        <CourseCard key={course.slug} course={course} />
+                {/* Category Filter */}
+                <div className="mb-8 flex flex-wrap gap-3">
+                    {categories.map((category) => (
+                        <button
+                            key={category.id}
+                            onClick={() => setSelectedCategory(category.id)}
+                            className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${selectedCategory === category.id
+                                    ? 'bg-pink-600 text-white shadow-lg'
+                                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                                }`}
+                        >
+                            {category.label}
+                        </button>
                     ))}
                 </div>
+
+                {/* Courses Grid */}
+                {filteredCourses.length > 0 ? (
+                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        {filteredCourses.map((course) => (
+                            <CourseCard key={course.slug} course={course} />
+                        ))}
+                    </div>
+                ) : (
+                    <div className="text-center py-12">
+                        <p className="text-gray-600 text-lg">No courses found in this category.</p>
+                    </div>
+                )}
             </main>
             <AccordionDemo />
             <Footer />

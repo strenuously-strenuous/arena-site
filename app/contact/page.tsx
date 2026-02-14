@@ -15,16 +15,16 @@ export default function Contact() {
                     <h1 className="left-0 end-0 text-center absolute z-50 text-white mx-auto text-7xl font-bold">Contact</h1>
                 </div>
                 <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #fff40026, #000)" }}></div>
-                <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
+                <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src="/images/Game/jonathon-gregory-bick-camera17.jpg" fill alt="banner image" />
             </div>
             <main className="bg-white">
                 {/* Hero */}
-                <section className="bg-[#F22E2E] text-white">
+                <section className=" ">
                     <div className="max-w-7xl mx-auto px-6 py-20 text-center">
                         <h1 className="text-4xl md:text-5xl font-bold">
                             Arena Animation <span className="text-[#F2E30C]">Patel Nagar</span>
                         </h1>
-                        <p className="mt-4 text-white/90 text-lg max-w-2xl mx-auto">
+                        <p className="mt-4  text-lg max-w-2xl mx-auto">
                             Get in touch with Arena Animation Patel Nagar to start your creative
                             career in Animation, VFX, Gaming & Digital Design.
                         </p>
@@ -49,22 +49,22 @@ export default function Contact() {
                             <div className="space-y-4 text-gray-700">
                                 <p>
                                     <strong className="text-[#F22E2E]">Address:</strong><br />
-                                    Patel Nagar, West Delhi, New Delhi – India
+                                    33, Patel Rd, South Patel Nagar, Block 5, Patel Nagar, New Delhi, Delhi 110008
                                 </p>
 
                                 <p>
                                     <strong className="text-[#F22E2E]">Phone:</strong><br />
-                                    +91 XXXXXXXXXX
+                                    +91 96252-77697
                                 </p>
 
                                 <p>
                                     <strong className="text-[#F22E2E]">Email:</strong><br />
-                                    info@arenapatelnagar.com
+                                    arenapn@gmail.com
                                 </p>
 
                                 <p>
                                     <strong className="text-[#F22E2E]">Working Hours:</strong><br />
-                                    Monday – Saturday: 10:00 AM – 7:00 PM
+                                    Monday – Saturday: 09:00 AM – 7:00 PM
                                 </p>
                             </div>
 

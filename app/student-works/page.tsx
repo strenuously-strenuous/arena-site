@@ -17,27 +17,23 @@ export default function StudentWorks() {
                 <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #fff40026, #000)" }}></div>
                 <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
             </div>
-            <main className="bg-white">
+            <main className="">
                 {/* Hero */}
-                <section className="bg-[#F22E2E] text-white">
-                    <div className="max-w-7xl mx-auto px-6 py-20 text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold">
+                <section className="grid gap-5 grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-6 py-20 text-center">
+                    <div className="border  p-5 rounded-4xl ">
+                        <h1 className="text-2xl md:text-3xl font-bold">
                             Creative  <span className="text-[#F2E30C]">Showcase</span>
                         </h1>
-                        <p className="mt-5 text-white/90 text-lg max-w-3xl mx-auto">
+                        <p className="mt-5  text-lg max-w-3xl mx-auto">
                             A showcase of creativity, skill, and passion — created by students
                             of Arena Animation Patel Nagar.
                         </p>
                     </div>
-                </section>
-
-                {/* Intro */}
-                <section className="py-16">
-                    <div className="max-w-4xl mx-auto px-6 text-center">
-                        <h2 className="text-3xl font-bold mb-4 text-[#F22E2E]">
-                            Learning by Creating
-                        </h2>
-                        <p className="text-gray-700 leading-relaxed">
+                    <div className="border  p-5 rounded-4xl">
+                        <h1 className="text-2xl md:text-3xl font-bold">
+                            Learning by <span className="text-[#F2E30C]">Creating</span>
+                        </h1>
+                        <p className="mt-5  text-lg max-w-3xl mx-auto">
                             At Arena Animation Patel Nagar, students don’t just learn tools —
                             they create industry-level projects. From animation films and VFX
                             shots to game assets and design portfolios, every project reflects
@@ -45,6 +41,7 @@ export default function StudentWorks() {
                         </p>
                     </div>
                 </section>
+
 
                 {/* Categories */}
                 <section className="py-10 bg-gray-50">

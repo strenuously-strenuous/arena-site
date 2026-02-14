@@ -22,7 +22,7 @@ export default function Home() {
         <NavbarPage />
         <video autoPlay muted loop className="h-full w-full object-cover absolute top-0 bottom-0" src="/videos/ju-jinhwan.mp4" style={{ maxHeight: '100%' }}></video>
         {/* <Image className="object-cover h-dvh h-screen" src={"/images/temp.jpg"} fill alt="Banner" /> */}
-        <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #fff40026, #000)" }}></div>
+        <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #000000d9 5%, #fff4002b, #000000b8)" }}></div>
         <HeroSection />
       </div>
       <Stats />
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
         <div>
           {/* <img src="https://preview.free3d.com/img/2015/05/1688734213211162270/fnim33ca.jpg" alt="" /> */}
-          <img src="https://preview.free3d.com/img/2014/06/2408166643059394256/avabf6js.jpg" alt="" />
+          <img src="/images/front-image-hp.jpeg" alt="" />
         </div>
 
       </div>

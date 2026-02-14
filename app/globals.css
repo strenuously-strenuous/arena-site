@@ -154,3 +154,6 @@
   /* height: 500px !important; */
 }
 
+#placement-brands img {
+  max-width: 150px;
+}

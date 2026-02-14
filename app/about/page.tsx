@@ -24,9 +24,9 @@ export default function About() {
                 <section className="py-20">
                     <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                         <img
-                            src="https://placehold.co/500x500"
+                            src="/images/about.jpeg"
                             alt="Creative students at Arena Animation"
-                            className="rounded-xl shadow-md"
+                            className=""
                         />
                         <div>
                             <h2 className="text-3xl font-bold mb-4 text-[#F22E2E]">

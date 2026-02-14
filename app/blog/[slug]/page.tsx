@@ -30,6 +30,8 @@ export default async function BlogDetailPage({
 
                 <MDXRemote source={content} />
             </article>
+
+
         )
     } catch {
         notFound()

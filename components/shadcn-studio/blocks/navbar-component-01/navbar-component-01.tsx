@@ -1,19 +1,13 @@
 'use client'
 
-import { MenuIcon, PhoneCallIcon } from 'lucide-react'
+import { useState } from 'react'
+import { MenuIcon, XIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
 
 import Logo from '@/components/shadcn-studio/logo'
 
@@ -25,35 +19,38 @@ type NavigationItem = {
 
 const Navbar = ({ navigationData, href }: { navigationData: NavigationItem, href: string }) => {
   const pathname = usePathname();
+  const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
 
   return (
     <header className='bg-background sticky top-0 z-100 text-white'>
       <div className='mx-auto flex container items-center justify-between gap-8 px-4 py-2 sm:px-6'>
         <div className='flex flex-1 items-center gap-8 font-medium justify-between lg:gap-16'>
-          <Link href='/'>
-            <Image src="/images/arena logO WHITE.png" width={100} height={100} alt='logo' />
-          </Link>
-          <div className='md:flex hidden gap-6'>
-            {navigationData.map((item, index) => {
-              const isActive =
-                pathname === item.href || pathname.startsWith(item.href + '/')
+          <div className='flex gap-10 items-center'>
+            <Link href='/'>
+              <Image src="/images/arena logO WHITE.png" width={100} height={100} alt='logo' />
+            </Link>
+            <div className='hidden lg:flex gap-6'>
+              {navigationData.map((item, index) => {
+                const isActive =
+                  pathname === item.href || pathname.startsWith(item.href + '/')
 
-              return (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className={clsx(
-                    'transition',
-                    isActive && 'text-secondary font-bold'
-                  )}
-                >
-                  {item.title}
-                </Link>
-              )
-            })}
+                return (
+                  <Link
+                    key={index}
+                    href={item.href}
+                    className={clsx(
+                      'transition',
+                      isActive && 'text-secondary font-bold'
+                    )}
+                  >
+                    {item.title}
+                  </Link>
+                )
+              })}
+            </div>
           </div>
           <div className='text-end'>
-            <a href="tel:9625277697" className='transition md:flex hidden gap-3 border-primary px-4 py-1 hover:opacity-50 text-white'>
+            <a href="tel:9625277697" className='transition lg:flex hidden gap-3 border-primary px-4 py-1 hover:opacity-50 text-white'>
 
               <div className='flex flex-col gap-0 '>
                 <span className='p-1 justify-end rounded-[2px] justify-center text-[12px] uppercase flex items-center gap-2'>
@@ -76,23 +73,82 @@ const Navbar = ({ navigationData, href }: { navigationData: NavigationItem, href
         </div>
 
         <div className='flex items-center gap-6'>
-          <DropdownMenu>
-            <DropdownMenuTrigger className='md:hidden' asChild>
-              <Button variant='outline' size='icon'>
-                <MenuIcon />
-                <span className='sr-only'>Menu</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className='w-56' align='end'>
-              <DropdownMenuGroup>
-                {navigationData.map((item, index) => (
-                  <DropdownMenuItem key={index}>
-                    <Link href={item.href}>{item.title}</Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuGroup>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Button
+            variant='outline'
+            size='icon'
+            className='lg:hidden'
+            onClick={() => setIsOffcanvasOpen(true)}
+          >
+            <MenuIcon />
+            <span className='sr-only'>Menu</span>
+          </Button>
+        </div>
+      </div>
+
+      {/* Offcanvas Overlay */}
+      {isOffcanvasOpen && (
+        <div
+          className='fixed inset-0 bg-black bg-opacity-50 lg:hidden z-40'
+          onClick={() => setIsOffcanvasOpen(false)}
+        />
+      )}
+
+      {/* Offcanvas Menu */}
+      <div
+        className={clsx(
+          'fixed top-0 left-0 h-screen w-full bg-background text-white lg:hidden z-50 transform transition-transform duration-300 ease-in-out overflow-y-auto',
+          isOffcanvasOpen ? 'translate-x-0' : '-translate-x-full'
+        )}
+      >
+        <div className='flex items-center justify-between p-4 border-b border-gray-700'>
+          <Link href='/' onClick={() => setIsOffcanvasOpen(false)}>
+            <Image src="/images/arena logO WHITE.png" width={80} height={80} alt='logo' />
+          </Link>
+          <button
+            onClick={() => setIsOffcanvasOpen(false)}
+            className='p-2 hover:bg-gray-800 rounded transition'
+          >
+            <XIcon size={24} />
+          </button>
+        </div>
+
+        <nav className='flex flex-col py-6 px-4'>
+          {navigationData.map((item, index) => {
+            const isActive =
+              pathname === item.href || pathname.startsWith(item.href + '/')
+
+            return (
+              <Link
+                key={index}
+                href={item.href}
+                onClick={() => setIsOffcanvasOpen(false)}
+                className={clsx(
+                  'py-3 px-4 text-lg font-medium transition hover:bg-gray-800',
+                  isActive && 'text-secondary font-bold bg-gray-800'
+                )}
+              >
+                {item.title}
+              </Link>
+            )
+          })}
+        </nav>
+
+        {/* Contact Info in Offcanvas */}
+        <div className='mt-6 px-4 py-6 border-t border-gray-700'>
+          <a
+            href="tel:9625277697"
+            className='flex gap-3 items-center p-4 bg-pink-600 hover:bg-pink-700 rounded-lg transition'
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 48 48">
+              <path fillRule="evenodd" clipRule="evenodd" d="M27 4H28.5C37.0604 4 44 10.9396 44 19.5V21H41V19.5C41 12.5964 35.4036 7 28.5 7H27V4Z" fill="white" data-color="color-2"></path>
+              <path fillRule="evenodd" clipRule="evenodd" d="M27 11H28.5C33.1944 11 37 14.8056 37 19.5V21H34V19.5C34 16.4624 31.5376 14 28.5 14H27V11Z" fill="white" data-color="color-2"></path>
+              <path fillRule="evenodd" clipRule="evenodd" d="M15.1398 2.81921L21.401 16.9167L15.6703 21.5012C18.4042 25.8921 22.1103 29.598 26.5026 32.3331L31.0841 26.6041L45.1812 32.8639L42.6274 42.6873C42.1264 44.6146 40.2548 45.9254 38.2346 45.5836C18.7551 42.2887 5.68935 29.2466 2.39027 9.76723C2.04793 7.74591 3.36019 5.87351 5.28882 5.37344L15.1398 2.81921Z" fill="white"></path>
+            </svg>
+            <div className='flex flex-col'>
+              <span className='text-sm uppercase font-semibold'>Free Counselling</span>
+              <span className='text-lg font-bold'>962-5277-697</span>
+            </div>
+          </a>
         </div>
       </div>
     </header>
