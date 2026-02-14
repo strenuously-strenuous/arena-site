@@ -504,6 +504,12 @@ export const courses: Course[] = [
                     "Set up Player Controls and Inputs",
                     "Enhance Gameplay with Collision Systems",
                     "Design User-Friendly Interfaces",
+
+
+
+
+
+                    
                     "Integrate Audio for Immersive Experiences",
                     "Export and Share your Game Demo",
                     "Build a Standout 3D Portfolio",

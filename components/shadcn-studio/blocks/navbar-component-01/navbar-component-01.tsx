@@ -22,7 +22,7 @@ const Navbar = ({ navigationData, href }: { navigationData: NavigationItem, href
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
 
   return (
-    <header className='bg-background sticky top-0 z-100 text-white'>
+    <header className='bg-background sticky top-0 z-50 text-white'>
       <div className='mx-auto flex container items-center justify-between gap-8 px-4 py-2 sm:px-6'>
         <div className='flex flex-1 items-center gap-8 font-medium justify-between lg:gap-16'>
           <div className='flex gap-10 items-center'>

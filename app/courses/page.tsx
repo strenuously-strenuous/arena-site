@@ -52,7 +52,7 @@ export default function CoursesPage() {
                             key={category.id}
                             onClick={() => setSelectedCategory(category.id)}
                             className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${selectedCategory === category.id
-                                    ? 'bg-pink-600 text-white shadow-lg'
+                                    ? 'bg-primary text-white shadow-lg'
                                     : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
                                 }`}
                         >

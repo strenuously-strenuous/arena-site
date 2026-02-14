@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { XIcon } from 'lucide-react';
 import clsx from 'clsx';
+import Image from 'next/image';
 
 interface FormData {
     name: string;
@@ -80,12 +81,16 @@ export default function ScrollPopupForm() {
             {/* Popup Form */}
             <div
                 className={clsx(
-                    'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-md mx-auto transition-all duration-300 ease-out',
+                    'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-100 w-full max-w-md mx-auto transition-all duration-300 ease-out',
                     showPopup
                         ? 'opacity-100 scale-100'
                         : 'opacity-0 scale-95 pointer-events-none'
                 )}
             >
+                <div className='flex justify-center align-center mb-5'>
+                    <Image src="/images/arena logO WHITE.png" width={170} height={170} alt='logo' />
+                </div>
+
                 <div className='bg-background rounded-lg shadow-2xl p-6 sm:p-8 relative border border-gray-700'>
                     {/* Close Button */}
                     <button
@@ -106,6 +111,7 @@ export default function ScrollPopupForm() {
                     ) : (
                         // Form
                         <>
+
                             <h2 className='text-2xl sm:text-3xl font-bold text-white mb-2'>
                                 Get Free Counseling
                             </h2>
@@ -173,7 +179,7 @@ export default function ScrollPopupForm() {
                                 {/* Submit Button */}
                                 <button
                                     type='submit'
-                                    className='w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-lg transition duration-200 mt-6'
+                                    className='w-full bg-secondary text-dark font-bold py-3 rounded-lg transition duration-200 mt-6'
                                 >
                                     Get Free Counseling
                                 </button>

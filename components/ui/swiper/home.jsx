@@ -21,10 +21,10 @@ export default function SwiperHome() {
                 pagination={{ clickable: true }}
             >
                 <SwiperSlide>
-                    <img className="w-full h-full" src="/images/Banner.png" alt="" />
+                    <img className="w-full h-full" src="/images/drive-01/banner1.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="w-full h-full" src="/images/drive-01/banner1.jpg" alt="" />
+                    <img className="w-full h-full" src="/images/Banner.png" alt="" />
                 </SwiperSlide>
             </Swiper>
         </div>

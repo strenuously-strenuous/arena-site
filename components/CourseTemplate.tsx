@@ -12,7 +12,14 @@ import type { Course } from "@/data/courses";
 export default function CourseTemplate({ course }: { course: Course }) {
     return (
         <>
-            <NavbarPage />
+            <div className="relative min-h-78">
+                <NavbarPage />
+                <div className="mt-22 container mx-auto bg-pink-900 relative z-50 bottom-0">
+                    <h1 className="left-0 end-0 text-center absolute z-50 text-white mx-auto text-7xl font-bold">Courses</h1>
+                </div>
+                <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #fff40026, #000)" }}></div>
+                <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
+            </div>
             <main className="max-w-6xl mx-auto px-6 py-10">
 
                 {/* Hero */}
