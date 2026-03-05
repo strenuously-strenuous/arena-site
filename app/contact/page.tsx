@@ -69,7 +69,7 @@ export default function Contact() {
                             </div>
 
                             <img
-                                src="https://placehold.co/600x350"
+                                src="/images/Visit or Reach Us.png"
                                 alt="Arena Animation Patel Nagar Location"
                                 className="mt-8 rounded-xl shadow-md"
                             />

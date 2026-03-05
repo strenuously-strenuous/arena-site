@@ -5,8 +5,11 @@ import Jumbotron from "@/components/ui/common/jumbotron/page";
 import WhyUs from "@/components/ui/common/whyus/page";
 import Footer from "@/components/ui/common/footer/page";
 import Image from "next/image";
+import VideoGallery from "@/components/VideoGallery";
 
 export default function StudentWorks() {
+
+
     return (
         <>
             <div className="relative min-h-78">
@@ -15,7 +18,7 @@ export default function StudentWorks() {
                     <h1 className="left-0 end-0 text-center absolute z-50 text-white mx-auto text-7xl font-bold">Student Works</h1>
                 </div>
                 <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #fff40026, #000)" }}></div>
-                <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
+                <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/Game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
             </div>
             <main className="">
                 {/* Hero */}
@@ -69,7 +72,7 @@ export default function StudentWorks() {
                 <section className="py-20">
                     <div className="max-w-7xl mx-auto px-6">
                         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-                            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+                            {/* {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
                                 <div
                                     key={item}
                                     className="group bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition"
@@ -96,10 +99,15 @@ export default function StudentWorks() {
                                         </p>
                                     </div>
                                 </div>
-                            ))}
+                            ))} */}
+
                         </div>
+
+                        <VideoGallery />
                     </div>
                 </section>
+
+                
 
                 {/* Why Student Works Matter */}
                 <section className="bg-[#F22E2E] text-white py-20">

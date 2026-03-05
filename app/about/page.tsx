@@ -15,7 +15,7 @@ export default function About() {
                     <h1 className="left-0 end-0 text-center absolute z-50 text-white mx-auto text-7xl font-bold">About</h1>
                 </div>
                 <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #fff40026, #000)" }}></div>
-                <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
+                <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/Game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
             </div>
 
             <main className="bg-white">
@@ -106,7 +106,7 @@ export default function About() {
                             </ul>
                         </div>
                         <img
-                            src="https://placehold.co/600x400"
+                            src="/images/another-imagesx234.jpeg"
                             alt="Animation and VFX Training"
                             className="rounded-xl shadow-md"
                         />

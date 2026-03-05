@@ -34,7 +34,7 @@ export default function CoursesPage() {
                     <h1 className="left-0 end-0 text-center absolute z-50 text-white mx-auto text-7xl font-bold">Courses</h1>
                 </div>
                 <div className=" absolute top-0 bottom-0 left-0 right-0 z-1" style={{ maxHeight: '1000px', background: "linear-gradient(182deg, #fff40026, #000)" }}></div>
-                <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
+                <Image className="absolute top-0 left-0 right-0 bottom-0 object-cover" src='/images/Game/jonathon-gregory-bick-camera17.jpg' fill alt="banner image" />
             </div>
 
 
@@ -52,8 +52,8 @@ export default function CoursesPage() {
                             key={category.id}
                             onClick={() => setSelectedCategory(category.id)}
                             className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${selectedCategory === category.id
-                                    ? 'bg-primary text-white shadow-lg'
-                                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                                ? 'bg-primary text-white shadow-lg'
+                                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
                                 }`}
                         >
                             {category.label}

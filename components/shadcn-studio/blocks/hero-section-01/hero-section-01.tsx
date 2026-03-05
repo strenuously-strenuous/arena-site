@@ -1,8 +1,8 @@
+'use client'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-
-// import RippleGrid from '@/components/RippleGrid';
+import EnquiryButton from '@/components/EnquiryButton'
 
 const HeroSection = () => {
   return (
@@ -67,13 +67,9 @@ const HeroSection = () => {
 
           <p className='my-10 lg:my-16 text-white'>
             Arena Animation empowers you with industry-focused training in <strong>Animation</strong>, <strong>VFX</strong>, <strong>Gaming</strong>, <strong>Digital Design</strong>, <strong>UI/UX</strong>, and <strong>Web Design & Development</strong>. With expert mentors, practical learning, and real-world projects, we help turn creative passion into a successful career.
-
-
           </p>
 
-          <Button size='lg' asChild>
-            <Link href='#'>Enquire Now</Link>
-          </Button>
+          <EnquiryButton />
         </div>
       </div>
     </section>
